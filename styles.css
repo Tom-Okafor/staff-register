@@ -20,6 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overscroll-behavior: none;
 }
 
 header {
@@ -96,6 +97,7 @@ main {
 
 form {
     width: min(90vh, 450px);
+    margin-bottom: 5rem;
 
 }
 
@@ -162,7 +164,7 @@ fieldset input {
     gap: 7px;
 }
 
-.controls> input {
+.controls>input {
     flex: 1 1 0;
     cursor: pointer;
     padding-block: 15px;
@@ -188,6 +190,20 @@ input[type="reset"] {
     text-transform: capitalize;
     font-weight: 600;
 }
-.controls > input:hover {
+
+.controls>input:hover {
     scale: 0.9;
+}
+
+footer {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--base-green);
+    font-weight: 600;
+    margin-top: auto;
+    width: 100%;
+    color: white;
+    text-transform: capitalize;
 }
