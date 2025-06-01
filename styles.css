@@ -4,7 +4,7 @@
     box-sizing: border-box;
     list-style-type: none;
     text-decoration: none;
-    color: #555;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 :root {
@@ -30,6 +30,7 @@ header {
     align-items: center;
     padding-inline: 2rem;
     background-color: var(--base-green);
+    margin-bottom: 5rem;
 }
 
 nav {
@@ -62,7 +63,7 @@ nav a::after {
     height: 2px;
     bottom: -5px;
     transform: scale(0);
-    background-color: var(--lighter-orange);
+    background-color: var(--light-orange);
     border-radius: 5px;
     transition: all 200ms ease-in-out;
     -webkit-transition: all 200ms ease-in-out;
@@ -91,4 +92,102 @@ nav a:hover::after {
 main {
     display: flex;
     margin-block: auto;
+}
+
+form {
+    width: min(90vh, 450px);
+
+}
+
+fieldset {
+    padding-inline: 2rem;
+    padding-block: 1.5rem;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border: 2px solid var(--base-green);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+legend {
+    padding: 10px;
+    border: 2px solid var(--base-green);
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--base-green);
+}
+
+fieldset section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px
+}
+
+fieldset section div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+fieldset input {
+    padding: 10px 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    box-shadow: inset 2px 0px 8px rgba(0, 0, 0, 0.4), inset -2px 0px 8px rgba(0, 0, 0, 0.4);
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.05rem;
+}
+
+
+.controls {
+    display: flex;
+    gap: 7px;
+}
+
+.controls> input {
+    flex: 1 1 0;
+    cursor: pointer;
+    padding-block: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1.5px;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+}
+
+input[type="submit"] {
+    background-color: var(--base-green);
+    box-shadow: inset 2px 0px 8px rgba(255, 255, 255, 0.6), inset -2px 0px 8px rgba(255, 255, 255, 0.6);
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+input[type="reset"] {
+    background-color: var(--base-orange);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.controls > input:hover {
+    scale: 0.9;
 }
