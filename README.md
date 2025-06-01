@@ -2,10 +2,10 @@
 
 ## TABLE OF CONTENTS
 
-_[ABOUT](#about)
-_[FEATURES](#features)
-_[USAGE](#usage)
-_[STACK](#stack)
+*[ABOUT](#about)
+*[FEATURES](#features)
+*[USAGE](#usage)
+*[STACK](#stack)
 
 ## ABOUT
 
