@@ -9,14 +9,8 @@
 </head>
 
 <body>
-    <header>
-        <span>Staff Register</span>
-        <nav>
-            <a href="">View All</a>
-            <a href="">Add Member</a>
-        </nav>
-    </header>
-    <main>
+<?php include_once './includes/header.php'; ?>
+<main>
         <form action="" method="post">
             <fieldset>
                 <legend>Add New Staff Member</legend>
@@ -95,9 +89,7 @@
         </form>
     </main>
 
-    <footer>
-        made with lots of 💟 by Tom!
-    </footer>
+    <?php include_once './includes/footer.php';?>
 </body>
 
 </html>
