@@ -19,7 +19,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     overscroll-behavior: none;
 }
 
@@ -92,7 +91,7 @@ nav a:hover::after {
 
 main {
     display: flex;
-    margin-block: auto;
+    justify-content: center;
 }
 
 form {
@@ -207,3 +206,20 @@ footer {
     color: white;
     text-transform: capitalize;
 }
+
+.register_heading {
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--base-orange);
+    letter-spacing: 2px;
+    line-height: 140%;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+
+    .register_main {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: start;
+    }
