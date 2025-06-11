@@ -28,6 +28,7 @@ include_once './includes/header.php';
                 <th>Role</th>
                 <th>Phone</th>
                 <th>Address</th>
+                <th>options</th>
             </tr>
         </thead>
         <tbody>
@@ -41,7 +42,115 @@ include_once './includes/header.php';
                 <td>Managing Director</td>
                 <td>+2339889879977</td>
                 <td>New York, USA</td>
-                
+                <td>
+                <a href="">edit</a>
+                <a href="">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Jonathan Offor</td>
+                <td>34</td>
+                <td>jonoffor@outlook.com</td>
+                <td>Male</td>
+                <td>He/Him</td>
+                <td>Managing Director</td>
+                <td>+2339889879977</td>
+                <td>New York, USA</td>
+                <td>
+                <a href="">edit</a>
+                <a href="">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Jonathan Offor</td>
+                <td>34</td>
+                <td>jonoffor@outlook.com</td>
+                <td>Male</td>
+                <td>He/Him</td>
+                <td>Managing Director</td>
+                <td>+2339889879977</td>
+                <td>New York, USA</td>
+                <td>
+                <a href="">edit</a>
+                <a href="">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Jonathan Offor</td>
+                <td>34</td>
+                <td>jonoffor@outlook.com</td>
+                <td>Male</td>
+                <td>He/Him</td>
+                <td>Managing Director</td>
+                <td>+2339889879977</td>
+                <td>New York, USA</td>
+                <td>
+                <a href="">edit</a>
+                <a href="">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Jonathan Offor</td>
+                <td>34</td>
+                <td>jonoffor@outlook.com</td>
+                <td>Male</td>
+                <td>He/Him</td>
+                <td>Managing Director</td>
+                <td>+2339889879977</td>
+                <td>New York, USA</td>
+                <td>
+                <a href="">edit</a>
+                <a href="">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Jonathan Offor</td>
+                <td>34</td>
+                <td>jonoffor@outlook.com</td>
+                <td>Male</td>
+                <td>He/Him</td>
+                <td>Managing Director</td>
+                <td>+2339889879977</td>
+                <td>New York, USA</td>
+                <td>
+                <a href="">edit</a>
+                <a href="">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Jonathan Offor</td>
+                <td>34</td>
+                <td>jonoffor@outlook.com</td>
+                <td>Male</td>
+                <td>He/Him</td>
+                <td>Managing Director</td>
+                <td>+2339889879977</td>
+                <td>New York, USA</td>
+                <td>
+                <a href="">edit</a>
+                <a href="">delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Jonathan Offor</td>
+                <td>34</td>
+                <td>jonoffor@outlook.com</td>
+                <td>Male</td>
+                <td>He/Him</td>
+                <td>Managing Director</td>
+                <td>+2339889879977</td>
+                <td>New York, USA</td>
+                <td>
+                <a href="">edit</a>
+                <a href="">delete</a>
+                </td>
             </tr>
         </tbody>
     </table>
