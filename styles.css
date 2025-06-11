@@ -227,6 +227,14 @@ footer {
 
 .register_main table {
     width: min(90%, 1300px);
+    border-radius: 20px;
+    box-shadow: 0px 5px 12px -5px rgba(0, 0, 0, 0.6);
+    padding: 0;
+    margin-bottom: 3rem;
+    -webkit-border-radius: ;
+    -moz-border-radius: ;
+    -ms-border-radius: ;
+    -o-border-radius: ;
 }
 
 thead {
@@ -237,6 +245,14 @@ thead {
 th {
     padding: 10px;
     text-transform: uppercase;
+}
+
+th:first-of-type {
+    border-top-left-radius: 20px;
+}
+
+th:last-of-type {
+    border-top-right-radius: 20px;
 }
 
 td {
@@ -257,5 +273,5 @@ td:last-child {
 }
 
 tbody tr:nth-of-type(3n + 1) {
-    background-color: var(--light-orange);
+    background-color: var(--lighter-orange);
 }
