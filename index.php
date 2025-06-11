@@ -43,9 +43,11 @@
                 <section>
                     <div>
                         <label for="member_role">Staff Member Role</label>
+                        <span aria-hidden="true">*</span>
+
                     </div>
                     <input type="text" id="member_role" name="role" placeholder="input the staff member's role"
-                        autocomplete="off">
+                        autocomplete="off" required>
                 </section>
 
                 <section>
