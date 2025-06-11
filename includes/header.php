@@ -12,6 +12,6 @@
         <span>Staff Register</span>
         <nav>
             <a href="register.php">View All</a>
-            <a href="">Add Member</a>
+            <a href="index.php">Add Member</a>
         </nav>
     </header>
