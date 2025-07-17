@@ -8,7 +8,11 @@ require_once './includes/connection.php';
     <h2 class="register_heading">Register Table</h2>
     <?php
     if ($con) {
-        echo '.<table>
+        $select_query = 'Select * from contact';
+        $query_result = mysqli_query($con, $select_query);
+        if (mysqli_num_rows($query_result)) {
+
+            echo '<table>
         <thead>
             <tr>
                 <th>S/N</th>
@@ -23,129 +27,45 @@ require_once './includes/connection.php';
                 <th>options</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>001</td>
-                <td>Jonathan Offor</td>
-                <td>34</td>
-                <td>jonoffor@outlook.com</td>
-                <td>Male</td>
-                <td>He/Him</td>
-                <td>Managing Director</td>
-                <td>+2339889879977</td>
-                <td>New York, USA</td>
-                <td>
-                <a href="">edit</a>
-                <a href="">delete</a>
-                </td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Jonathan Offor</td>
-                <td>34</td>
-                <td>jonoffor@outlook.com</td>
-                <td>Male</td>
-                <td>He/Him</td>
-                <td>Managing Director</td>
-                <td>+2339889879977</td>
-                <td>New York, USA</td>
-                <td>
-                <a href="">edit</a>
-                <a href="">delete</a>
-                </td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Jonathan Offor</td>
-                <td>34</td>
-                <td>jonoffor@outlook.com</td>
-                <td>Male</td>
-                <td>He/Him</td>
-                <td>Managing Director</td>
-                <td>+2339889879977</td>
-                <td>New York, USA</td>
-                <td>
-                <a href="">edit</a>
-                <a href="">delete</a>
-                </td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Jonathan Offor</td>
-                <td>34</td>
-                <td>jonoffor@outlook.com</td>
-                <td>Male</td>
-                <td>He/Him</td>
-                <td>Managing Director</td>
-                <td>+2339889879977</td>
-                <td>New York, USA</td>
-                <td>
-                <a href="">edit</a>
-                <a href="">delete</a>
-                </td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Jonathan Offor</td>
-                <td>34</td>
-                <td>jonoffor@outlook.com</td>
-                <td>Male</td>
-                <td>He/Him</td>
-                <td>Managing Director</td>
-                <td>+2339889879977</td>
-                <td>New York, USA</td>
-                <td>
-                <a href="">edit</a>
-                <a href="">delete</a>
-                </td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Jonathan Offor</td>
-                <td>34</td>
-                <td>jonoffor@outlook.com</td>
-                <td>Male</td>
-                <td>He/Him</td>
-                <td>Managing Director</td>
-                <td>+2339889879977</td>
-                <td>New York, USA</td>
-                <td>
-                <a href="">edit</a>
-                <a href="">delete</a>
-                </td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Jonathan Offor</td>
-                <td>34</td>
-                <td>jonoffor@outlook.com</td>
-                <td>Male</td>
-                <td>He/Him</td>
-                <td>Managing Director</td>
-                <td>+2339889879977</td>
-                <td>New York, USA</td>
-                <td>
-                <a href="">edit</a>
-                <a href="">delete</a>
-                </td>
-            </tr>
-            <tr>
-                <td>001</td>
-                <td>Jonathan Offor</td>
-                <td>34</td>
-                <td>jonoffor@outlook.com</td>
-                <td>Male</td>
-                <td>He/Him</td>
-                <td>Managing Director</td>
-                <td>+2339889879977</td>
-                <td>New York, USA</td>
-                <td>
-                <a href="">edit</a>
-                <a href="">delete</a>
-                </td>
-            </tr>
+        <tbody>';
+            $count = 001;
+            while ($row = mysqli_fetch_assoc($query_result)) {
+                $name = $row['name'];
+                $email = $row['email'];
+                $gender = $row['sex'];
+                $phone = $row['phone'];
+                $address = $row['address'];
+                $pronouns = $row['pronouns'];
+                $age = $row['age'];
+                $role = $row['role'];
+                echo "
+             <tr>
+                 <td>$count</td>
+                 <td>$name</td>
+                 <td>$age</td>
+                 <td>$email</td>
+                 <td>$gender</td>
+                 <td>$pronouns</td>
+                 <td>$role</td>
+                 <td>$phone</td>
+                 <td>$address</td>
+                 <td>
+                 <a href=''>edit</a>
+                 <a href=''>delete</a>
+                 </td>
+             </tr>";
+                $count++;
+            }
+            echo '
         </tbody>
-    </table>';
+        </table>';
+
+        } else {
+
+            echo '<h2>No data Inserted</h2>';
+
+        }
+
     } else {
         echo '<h2>Failed to connect to the database.</h2>';
     }
