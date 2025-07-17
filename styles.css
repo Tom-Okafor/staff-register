@@ -275,3 +275,9 @@ td:last-child {
 tbody tr:nth-of-type(3n + 1) {
     background-color: var(--lighter-orange);
 }
+
+h2 {
+    color: var(--base-green);
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
