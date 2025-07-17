@@ -1,22 +1,14 @@
 <?php
 
 include_once './includes/header.php';
-/*
-
-- Name
-- Age
-- Sex
-- Preferred Pronouns
-- Role or Position
-- Email Address
-- Phone Number
-- Residential Address
-*/
+require_once './includes/connection.php';
 ?>
 
 <main class="register_main">
     <h2 class="register_heading">Register Table</h2>
-    <table>
+    <?php
+    if ($con) {
+        echo '.<table>
         <thead>
             <tr>
                 <th>S/N</th>
@@ -153,7 +145,12 @@ include_once './includes/header.php';
                 </td>
             </tr>
         </tbody>
-    </table>
+    </table>';
+    } else {
+        echo '<h2>Failed to connect to the database.</h2>';
+    }
+?>
+    
 </main>
 
 <?php include_once './includes/footer.php'; ?>
