@@ -1,5 +1,32 @@
 
-<?php include_once './includes/header.php';?>
+<?php include_once './includes/header.php';
+include_once './includes/connection.php';
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    $pronouns = $_POST['pronouns'];
+    $sex = $_POST['sex'];
+    $role = $_POST['role'];
+    $age = $_POST['age'];
+    $insert_query = "insert into contact (name, email, phone, address, pronouns, sex, role, age) VALUES ('$name', '$email', '$phone', '$address', '$pronouns', '$sex', '$role', '$age' )";
+    $insert_result = mysqli_query($con, $insert_query);
+    if ($insert_result) {
+        echo " <script>
+        alert('DATA INSERTED SUCCESSFULLY!');
+                window.open('register.php', '_self');
+        </script>";
+    } else {
+        echo '<h3>Failed to insert data into database</h3>';
+        die(mysqli_error($con));
+    }
+}
+
+
+
+?>
 
 <body>
 <main>
@@ -75,7 +102,7 @@
                         autocomplete="off">
                 </section>
                 <div class="controls">
-                <input type="submit" name="submit">
+                <input type="submit" name="submit" value="submit">
                 <input type="reset">
                 </div>
                 
