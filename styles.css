@@ -256,7 +256,7 @@ th:last-of-type {
 }
 
 td {
-    text-align: center;
+    text-align: left;
     padding: 8px;
     text-transform: capitalize;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -277,7 +277,7 @@ tbody tr:nth-of-type(3n + 1) {
 }
 
 h2 {
-    color: var(--base-green);
+    color: var(--base-orange);
     letter-spacing: 2px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
