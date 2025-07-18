@@ -2,10 +2,39 @@
 
 include_once 'includes/header.php';
 include 'includes/connection.php';
+
 if (!isset($_GET['member_id'])) {
     echo "<script>window.open('register.php', '_self')</script>";
 }
 $id = $_GET['member_id'];
+
+// handle the submit post request
+if (isset($_POST['submit'])) {
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    $pronouns = $_POST['pronouns'];
+    $sex = $_POST['sex'];
+    $role = $_POST['role'];
+    $age = $_POST['age'];
+    $update_query = "update contact set name='$name', email='$email', phone='$phone', address='$address', pronouns='$pronouns', sex='$sex', role='$role', age='$age' where id=$id";
+    $update_result = mysqli_query($con, $update_query);
+    echo $update_result;
+    if ($update_result) {
+        echo "
+        <script>
+        alert('Data updated successfully');
+        window.open('register.php', '_self');
+        </script>
+        ";
+    } else {
+        die(mysqli_error($con));
+    }
+}
+
+// Get details of member to be edited from the member_id set in the query
 $search_query = "select * from contact where id=$id";
 $search_result = mysqli_query($con, $search_query);
 if ($search_result -> num_rows) {
