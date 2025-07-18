@@ -30,6 +30,7 @@ require_once './includes/connection.php';
         <tbody>';
             $count = 001;
             while ($row = mysqli_fetch_assoc($query_result)) {
+                $id = $row['id'];
                 $name = $row['name'];
                 $email = $row['email'];
                 $gender = $row['sex'];
@@ -50,8 +51,8 @@ require_once './includes/connection.php';
                  <td>$phone</td>
                  <td>$address</td>
                  <td>
-                 <a href=''>edit</a>
-                 <a href=''>delete</a>
+                 <a href='edit.php?member_id=$id'>edit</a>
+                 <a href='register.php?member_ id=$id'>delete</a>
                  </td>
              </tr>";
                 $count++;
