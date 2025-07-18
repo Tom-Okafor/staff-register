@@ -2,6 +2,22 @@
 
 include_once './includes/header.php';
 require_once './includes/connection.php';
+
+if (isset($_GET['member_id'])) {
+    $id = $_GET['member_id'];
+    $name = $_GET['member_name'];
+    $delete_query = "delete from contact where id = $id";
+    $delete_action = mysqli_query($con, $delete_query);
+    if ($delete_action) {
+        echo "<script>
+        alert('$name has been deleted from the register');
+        window.open('register.php', '_self');
+        </script>";
+        exit();
+    } else {
+        die(mysqli_error($con));
+    }
+}
 ?>
 
 <main class="register_main">
@@ -52,7 +68,7 @@ require_once './includes/connection.php';
                  <td>$address</td>
                  <td>
                  <a href='edit.php?member_id=$id'>edit</a>
-                 <a href='register.php?member_ id=$id'>delete</a>
+                 <a href='register.php?member_id=$id&member_name=$name'>delete</a>
                  </td>
              </tr>";
                 $count++;
