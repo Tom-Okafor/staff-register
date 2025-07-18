@@ -68,7 +68,7 @@ if (isset($_GET['member_id'])) {
                  <td>$address</td>
                  <td>
                  <a href='edit.php?member_id=$id'>edit</a>
-                 <a href='register.php?member_id=$id&member_name=$name'>delete</a>
+                 <a href='register.php?member_id=$id&member_name=$name' data-memberId='$id' data-memberName='$name' class='delete-link'>delete</a>
                  </td>
              </tr>";
                 $count++;
@@ -91,3 +91,18 @@ if (isset($_GET['member_id'])) {
 </main>
 
 <?php include_once './includes/footer.php'; ?>
+
+<script>
+const deleteLink = document.querySelectorAll('.delete-link');
+deleteLink.forEach((eachLink) => {
+    eachLink.addEventListener('click', function(evt){
+        evt.preventDefault();
+     const id =   eachLink.getAttribute('data-memberId');
+     const name = eachLink.getAttribute('data-memberName');
+        const permission = confirm(`Are you sure you want to delete ${name}'s data?`);
+        if (permission) {
+            window.open(`register.php?member_id=${id}&member_name=${name}`, '_self');
+        }
+    });
+})
+</script>
